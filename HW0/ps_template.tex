@@ -14,7 +14,8 @@
 \graphicspath{{images/}}
 
 \begin{document}
-\ctitle{xx}{yy}
+\ctitle{0}{Atibhav Mittal (804598987)}
+\title{}
 \author{}
 \date{}
 \maketitle
@@ -22,7 +23,7 @@
 
 \section{Problem 1}
 \begin{enumerate}
-\item Problem 1
+\item Problem 1 \newline
 
 \solution{}
 \[
@@ -35,7 +36,7 @@
 \section{Problem 2}
 
 \begin{enumerate}
-\item Problem 2a
+\item Problem 2a \newline
 \solution{}
 $$
 \begin{pmatrix}
@@ -51,7 +52,7 @@ $$
 \end{pmatrix}
 $$
 
-\item Problem 2b
+\item Problem 2b \newline
 \solution{}
 $$
 \begin{pmatrix}
@@ -69,7 +70,7 @@ $$
 \end{pmatrix}
 $$
 
-\item Problem 2c
+\item Problem 2c \newline
 \solution{}
 
 Yes, the matrix X is invertible since it has a non-zero determinant \break
@@ -88,7 +89,7 @@ X^{-1} = \frac{1}{2}
 \end{pmatrix}
 $$
 
-\item Problem 2d
+\item Problem 2d \newline
 \solution{}
 The rank of X is 2 (since it is invertible)
 \end{enumerate}
@@ -98,25 +99,27 @@ The rank of X is 2 (since it is invertible)
 \section{Problem 3}
 \begin{enumerate}
 
-\item Problem 3a
+\item Problem 3a \newline
 \solution{}
 $$
 Sample\quad Mean = \frac{1 + 1 + 0 + 1 + 0}{5} = \frac{3}{5} = 0.6
 $$
 
 
-\item Problem 3b
+\item Problem 3b \newline
 \solution{}
-TODO!!!!
+$$
+Sample\quad Variance = \frac{1.3}{5} = 0.26
+$$
 
-\item Problem 3c
+\item Problem 3c \newline
 \solution{}
 Probability of observing this pattern is:
 $$
 \frac{1}{2^5} = \frac{1}{32}
 $$
 
-\item Problem 3d
+\item Problem 3d \newline
 \solution{}
 Let the probability 
 $$
@@ -134,13 +137,13 @@ $$
 - {(p-1)}^2 (5p - 2) = 0
 $$
 $$
-\rightarrow p = \frac{2}{5}
+\Rightarrow p = \frac{2}{5}
 $$
 $$
-\rightarrow P(X_{i} = 1) = \frac{3}{5}
+\Rightarrow P(X_{i} = 1) = \frac{3}{5}
 $$
 
-\item Problem 3e
+\item Problem 3e \newline
 \solution{}
 $$
 P(X = T | Y = b) = \frac{0.1}{0.1 + 0.15} = \frac{0.1}{0.25} = \frac{2}{5}
@@ -151,23 +154,23 @@ $$
 \section{Problem 4}
 \begin{enumerate}
 
-\item Problem 4a
+\item 
 \solution{}
 False
 
-\item Problem 4b
+\item 
 \solution{}
 True
 
-\item Problem 4c
+\item 
 \solution{}
 False
 
-\item Problem 4d
+\item 
 \solution{}
 False
 
-\item Problem 4e
+\item
 \solution{}
 True
 
@@ -186,13 +189,13 @@ True
 \newpage
 \section{Problem 6}
 \begin{enumerate}
-\item Problem 6a
+\item Problem 6a \newline
 \solution{}
 Mean of a Bernoulli random variable = p \newline
 Variance of a Bernoulli random variable = p(1 - p)
 
-\item Problem 6b
-\solution{} \newline
+\item Problem 6b \newline
+\solution{}
 $$var(X) = \sigma ^ 2$$
 $$var(2X) = 4 \sigma ^ 2$$
 $$var(X + 2) =  \sigma ^ 2$$
@@ -201,19 +204,23 @@ $$var(X + 2) =  \sigma ^ 2$$
 \newpage
 \section{Problem 7}
 \begin{enumerate}
-\item Problem 7a (i)
+\item
+\begin{enumerate}
+\item 
 \solution{}
 Both f(n) = O(g(n)) and g(n) = O(f(n)) are true
 
-\item Problem 7a (ii)
+\item
 \solution{}
 f(n) = O(g(n))
 
-\item Problem 7a (iii)
+\item 
 \solution{}
 f(n) = O(g(n))
+\end{enumerate}
 
-\item Problem 7b
+
+\item Problem 7b \newline
 \solution{}
 \begin{lstlisting}
 findTransition(Array a, startIndex, endIndex):
@@ -255,7 +262,7 @@ Runtime:
 \newpage
 \section{Problem 8}
 \begin{enumerate}
-\item Problem 8a
+\item Problem 8a \newline
 \solution{}
 $$
 	E[XY] = \sum_{x,y} xy p_{X,Y}(x,y)
@@ -270,32 +277,34 @@ $$
 	E[XY] = E[X]E[Y]
 $$
 
-\item Problem 8b (i)
+\item Problem 8b (i) \newline
 \solution{}
-TODO!!!
-\item Problem 8b (ii)
+Number of times 3 shows up on a fair die rolled 6000 times is = Binomial (6000, $\frac{1}{6}$) \newline
+Expectation = $ np = 6000 \cdot \frac{1}{6} = 1000 $
+
+\item Problem 8b (ii) \newline
 \solution{}
-TODO!!!
+Using the central limit theorem, as n$\rightarrow \infty$,
+distribution approaches N(0, $\sigma^2$). \newline
+For a fair coin, $\sigma^2 = p(1 - p) = \frac{1}{2} ^2 = \frac{1}{4}$ \newline
+Hence, the distribution becomes N(0, $\frac{1}{4}$)
 \end{enumerate}
 
 \newpage
 \section{Problem 9}
 \subsection{9a}
 \begin{enumerate}
-\item Problem 9a (i)
+\item Problem 9a (i) 
 \solution{}
 \newline
 \includegraphics[scale=0.4]{9a(i)}
 
-\iffalse
 \item Problem 9a (ii)
 \solution{}
 \newline
-TODO!!!
 \includegraphics[scale=0.4]{9a(ii)}
-\fi
 
-\item Problem 9a (iii)
+\item Problem 9a (iii) 
 \solution{}
 \newline
 \includegraphics[scale=0.4]{9a(iii)}
@@ -309,12 +318,16 @@ TODO!!!
 
 \subsection{9b}
 \begin{enumerate}
-\item 9b (i)
+\setcounter{enumi}{1}
+
+\item
+\begin{enumerate}
+\item 9b (i) \newline
 \solution{}
 The eigenvector $\vec{v}$ of a square matrix, $A$ is a vector such that $$ A\vec{v} = \lambda \vec{v}$$
 The scalar $\lambda$ is called an eigenvalue of the square matrix.
 
-\item 9b (ii)
+\item 9b (ii) \newline
 \solution{}
 The eigenvalues can be found by setting the determinant of the matrix $ A - \lambda I$ equal to 0
 $$
@@ -370,11 +383,111 @@ $$
 \end{bmatrix}
 $$
 
-\item Problem 9b (iii)
+\item Problem 9b (iii) \newline
 \solution{}
+Consider a matrix A, with eigenvectors $v_{1}, v_{2}, ... , v_{n}$ and eigenvalues 
+$\lambda_{1}, \lambda_{2}, ..., \lambda_{n}$. \newline
+To prove the required statement we use induction. \newline
+Base case:
+The base case is trivial. For the matrix A, we have the eigenvectors 
+$v_{1}, v_{2}, ... , v_{n}$ and eigenvalues $\lambda_{1}, \lambda_{2}, ..., \lambda_{n}$ \newline
+Induction Step: \newline
+Assume that for $A^k$, the eigenvectors are $v_{1}, v_{2}, ... , v_{n}$ and eigenvalues $\lambda_{1}^k, \lambda_{2}^k, ..., \lambda_{n}^k$ \newline
+We need to show this for $A^{k+1}$ \newline
+Consider any eigenvector $v_{i}$ of $A^{k}$, with eigenvalue $\lambda_{i}^{k}$
+$$ A^k v_{i} = \lambda_{i}^{k} v_{i}$$ 
+$$ A^{k+1} v_{i} = A A^{k} v_{i} = A \lambda_{i}^{k} v_{i} = \lambda_{i}^{k} A v_{i} = \lambda_{i}^{k+1} v_{i}$$
+$\Rightarrow A^{k+1}$ has eigenvalue $\lambda_{i}^{k+1}$ and eigenvector $v_{i}$. \newline
+Hence, proved by the principle of mathematical induction.
+\end{enumerate}
 
+\item Problem 9c \newline
+\begin{enumerate}
+\item 9c (i) \newline
+\solution{} 
+$$
+\frac{\partial (a^T x)}{\partial x} = a^T
+$$
+
+\item 9c (ii) \newline
+\solution{}
+$$
+\frac{\partial (x^T Ax)}{\partial x} = x^T (A^T + A)
+$$
 
 \end{enumerate}
 
+\item Problem 9d \newline
+\begin{enumerate}
+\item 9d(i) \newline
+\solution{}
+Consider two points $x_{1}, x_{2}$ that lie on the line.
+$$ w^T x_{1} + b = 0$$
+$$ w^T x_{2} + b = 0$$
+Subtracting second equation from first equation,
+$$ w^T x_{1} - w^T x_{2} = 0$$
+$$ w^T (x_{1} - x_{2}) = 0 $$
+$$ \vec{w} \cdot (\vec{x_{1}} - \vec{x_{2}}) = 0$$
+Hence, w is orthogonal to the line passing through $x_{1}$ and $x_{2}$.
+
+\item 9d(ii) \newline
+\solution{}
+Let w = ($a_{1}, a_{2}, ... a_{n}$) and x = ($x_{1}, x_{2}, ..., x_{n}$)
+$$ w^T x + b = a_{1} x_{1} + a_{2} x_{2} + .... + a_{n} x_{n} + b $$
+$$ ||w||_{2} = \sqrt{a_{1}^2 + a_{2}^2 + ... + a_{n}^2}$$
+Distance from (0,0,0...,0) = $\frac{0 + 0 + ... + b}{\sqrt{a_{1}^2 + a_{2}^2 + ... + a_{n}^2}} = \frac{b}{||w||_2}$
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+\section{Problem 10}
+\begin{enumerate}
+\item
+\solution{} \newline
+\includegraphics[scale=0.5]{10a.png}
+
+\item 
+\solution{} \newline
+\includegraphics[scale=0.5]{10b.png}
+
+\item 
+\solution{} \newline
+\includegraphics[scale=0.5]{10c.png}
+
+\item
+\solution{} \newline
+\includegraphics[scale=0.5]{10d.png}
+
+\item
+\solution{} \newline
+\includegraphics[scale=0.5]{10e.png}
+\end{enumerate}
+
+\newpage
+\section{Problem 11}
+\solution{}
+\begin{lstlisting}[language=Python]
+import numpy as np 
+
+A = np.array([[1, 0], [1, 3]])
+
+eigenvalues, eigenvectors = np.linalg.eig(A)%
+
+max_eigenval_index = np.argmax(eigenvalues)
+
+max_eigenvector = eigenvectors[max_eigenval_index]
+
+print(max_eigenvector)
+\end{lstlisting}
+
+\newpage
+\section{Problem 12}
+\begin{enumerate}
+\item Yelp Open Dataset
+\item https://www.yelp.com/dataset
+\item The dataset contains details of a business (such as address, number of reviews etc. ) and reviews of the business. It also contains the number of checkins on the business every hour. This can be used to predict the number of checkins in the future for each business. 
+\item 4.7 million reviews, so the dataset contains 4.7 million rows
+\item Features: Number of check-ins for the business, number of useful votes, number of funny votes, number of cool votes, star rating, number of complaints
+\end{enumerate}
 
 \end{document}
