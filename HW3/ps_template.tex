@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+
+\newcommand{\cnum}{CM146}
+\newcommand{\ced}{Winter 2018}
+\newcommand{\ctitle}[3]{\title{\vspace{-0.5in}\cnum, \ced\\Problem Set #1: #2}}
+
+\newcommand{\solution}[1]{{{\color{blue}{\bf Solution:} {#1}}}}
+\usepackage[usenames,dvipsnames,svgnames,table,hyperref]{xcolor}
+\usepackage{amsmath}
+\renewcommand*{\theenumi}{\alph{enumi}}
+\renewcommand*\labelenumi{(\theenumi)}
+\renewcommand*{\theenumii}{\roman{enumii}}
+\renewcommand*\labelenumii{\theenumii.}
+
+
+\begin{document}
+\ctitle{xx}{yy}
+\author{}
+\date{}
+\maketitle
+\vspace{-0.75in}
+
+\section{Problem 1}
+\begin{enumerate}
+\item Problem 1a
+
+\solution{Solution to problem 1a}
+
+\vspace{10cm}
+\item Problem 1b
+
+\solution{Solution to problem 1a}
+\end{enumerate}
+
+\newpage
+\section{Problem 2}
+
+\solution{} \newline
+Assume that $x = \begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
+$ and $ z = \begin{bmatrix}
+z_1 \\
+z_2
+\end{bmatrix}
+$
+$$
+K_\beta (x, z) = (1 + \beta x \cdot z)^3
+$$
+\begin{align*}
+K_\beta (x, z) = & x_1^3 \beta^3 z_1^3 + x_2^3 \beta^3 z_2^3 + 3 x_1 x_2^2 \beta^3 z_1 z_2^2 + 3 x_1^2 x_2 \beta^3 z_1^2 z_2 + 3 x_1^2 \beta^2 z_1^2 + 3 x_2^2 \beta^2 z_2^2 + \\ 
+&  6 x_1 x_2 \beta^2 z_1 z_2 + 3 x_1 \beta z_1 + 3 x_2 \beta z_2 + 1
+\end{align*}
+$$
+\Rightarrow \phi_{\beta}(\boldsymbol{x}) = 
+\begingroup
+\renewcommand*{\arraystretch}{1.5}
+\begin{bmatrix}
+1 \\
+\sqrt{3}\sqrt{\beta}x_1 \\ 
+\sqrt{3}\sqrt{\beta}x_2 \\
+\sqrt{6} \beta x_1 x_2 \\
+\sqrt{3} \beta x_1^2 \\
+\sqrt{3} \beta x_2^2 \\
+\sqrt{3}\beta^{3/2} x_1^2 x_2 \\
+\sqrt{3}\beta^{3/2} x_1 x_2^2 \\
+\beta^{3/2}x_1^3 \\
+\beta^{3/2}x_2^3 \\
+\end{bmatrix}
+\endgroup
+$$
+
+
+\newpage
+\section{Problem 3}
+\begin{enumerate}
+\item 
+\solution{} \newline
+ABC
+\end{enumerate}
+
+\newpage
+\section{Problem 4}
+\begin{enumerate}
+\item - (c) \newline
+The number of unique words in the dataset is 1811. \newline
+Hence, the dimensionality of the dataset is 1811.
+\setcounter{enumi}{3}
+\item 
+Hello
+\end{enumerate}
+\end{document}
