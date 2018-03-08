@@ -148,9 +148,9 @@ def performance(y_true, y_pred, metric="accuracy"):
     ### ========== TODO : START ========== ###
     # part 2a: compute classifier performance
     if metric == "accuracy":
-        performance = metrics.accuracy_score(y_true, y_pred.round())
-    elif metric == "f1-score":
-        performance = metrics.f1_score(y_true, y_pred.round(), average="weighted") #TODO: Check if average is the correct option
+        performance = metrics.accuracy_score(y_true, y_label) 
+    elif metric == "f1_score":
+        performance = metrics.f1_score(y_true, y_label) #TODO: Check if average is the correct option
     elif metric == "auroc":
         performance = metrics.roc_auc_score(y_true, y_pred)
     return performance
@@ -189,7 +189,9 @@ def cv_performance(clf, X, y, kf, metric="accuracy"):
         curr_test_y = y[test_index]
         clf.fit(curr_train_X, curr_train_y)
         y_pred = clf.decision_function(curr_test_X)
-        performance_list.append(performance(curr_test_y, y_pred, metric=metric))
+        performance_value = performance(curr_test_y, y_pred, metric=metric)
+        performance_list.append(performance_value)
+
     return sum(performance_list)/float(len(performance_list))
     ### ========== TODO : END ========== ###
 
@@ -219,7 +221,16 @@ def select_param_linear(X, y, kf, metric="accuracy"):
     
     ### ========== TODO : START ========== ###
     # part 2: select optimal hyperparameter using cross-validation
-    return 1.0
+    current_best = 0
+    best_C = C_range[0]
+    for c in C_range:
+        clf = SVC(kernel='linear', C=c)
+        performance = cv_performance(clf, X, y, kf, metric=metric)
+        print "c = %f, performace = %f" % (c, performance)
+        if performance > current_best:
+            current_best = performance
+            best_C = c
+    return best_C
     ### ========== TODO : END ========== ###
 
 
@@ -246,7 +257,11 @@ def performance_test(clf, X, y, metric="accuracy"):
     ### ========== TODO : START ========== ###
     # part 3: return performance on test data by first computing predictions and then calling performance
 
-    score = 0        
+    score = 0
+
+    y_pred = clf.decision_function(X)
+    score = performance(y, y_pred, metric)
+
     return score
     ### ========== TODO : END ========== ###
 
@@ -262,7 +277,7 @@ def main() :
     dictionary = extract_dictionary('../data/tweets.txt')
     X = extract_feature_vectors('../data/tweets.txt', dictionary)
     y = read_vector_file('../data/labels.txt')
-    
+
     metric_list = ["accuracy", "f1_score", "auroc"]
     
     ### ========== TODO : START ========== ###
@@ -273,13 +288,22 @@ def main() :
     y_test = y[560:]
     # part 2: create stratified folds (5-fold CV)
     skf = StratifiedKFold(y_train, n_folds=5)
-    clf = SVC()
-    print cv_performance(clf, X_train, y_train, skf, metric="auroc")
+
+    best_C_values = []
 
     # part 2: for each metric, select optimal hyperparameter for linear-kernel SVM using CV
-        
+    for metric in metric_list:
+        c = select_param_linear(X_train, y_train, skf, metric=metric)
+        best_C_values.append((metric, c))
+    print best_C_values
     # part 3: train linear-kernel SVMs with selected hyperparameters
     
+    for metric, c in best_C_values:
+        clf = SVC(kernel='linear', C=c)
+        clf.fit(X_train, y_train)
+        test_performance = performance_test(clf, X_test, y_test, metric=metric)
+
+        print "For Metric: %s, Test Performance: %f" % (metric, test_performance)
     # part 3: report performance on test data
     
     ### ========== TODO : END ========== ###

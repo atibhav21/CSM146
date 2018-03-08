@@ -1,0 +1,181 @@
+\documentclass[11pt]{article}
+
+\newcommand{\cnum}{CM146}
+\newcommand{\ced}{Winter 2018}
+\newcommand{\ctitle}[3]{\title{\vspace{-0.5in}\cnum, \ced\\Problem Set #1: #2}}
+
+\newcommand{\solution}[1]{{{\color{blue}{\bf Solution:} {#1}}}}
+\usepackage[usenames,dvipsnames,svgnames,table,hyperref]{xcolor}
+\usepackage{graphicx}
+\renewcommand*{\theenumi}{\alph{enumi}}
+\renewcommand*\labelenumi{(\theenumi)}
+\renewcommand*{\theenumii}{\roman{enumii}}
+\renewcommand*\labelenumii{\theenumii.}
+
+
+\begin{document}
+\ctitle{xx}{yy}
+\author{}
+\date{}
+\maketitle
+\vspace{-0.75in}
+
+\section{Problem 1}
+\begin{enumerate}
+\item Problem 1a \solution{} \newline
+\scalebox{0.79}{
+        \begin{tabular}{|c|c||c|c|c|c||c|c|c|c|}
+
+          \hline
+          & & \multicolumn{4}{c||}{Hypothesis 1 (1st iteration)}
+	  & \multicolumn{4}{c|}{Hypothesis 2 (2nd iteration)} \\
+          \cline{3-10}
+          {\em i} & Label & $D_0$ & $f_1 \equiv $ & $f_2 \equiv $ & $h_1\equiv$ & $D_1$ &  $f_1 \equiv $ & $f_2 \equiv $ & $h_2 \equiv $ \\
+          & & & [$x >$ 2 $\;$] & [$y >$ 6 $\;$] & [sgn(x - 2)] & & [$x >$10$\;$] & [$y > 11.5$ $\;$] & [$\;$ sgn(y - 11.5) $\;$] \\
+
+          \tiny{(1)} & \tiny{(2)} & \tiny{(3)} & \tiny{(4)} &  \tiny{(5)} & \tiny{(6)} & \tiny{(7)} & \tiny{(8)} & \tiny{(9)} & \tiny{(10)}\\
+          \hline \hline
+          {\em 1} & $-$ & 0.1 & - & + & - & 0.0439 & - & - & -  \\
+          \hline
+          {\em 2} & $-$ & 0.1 & - & - & - & 0.0439 & - & - & - \\
+          \hline
+          {\em 3} & $+$ & 0.1 & + & + & + & 0.0439 & - & - & - \\
+          \hline
+          {\em 4} & $-$ & 0.1 & - & - & - & 0.0439 & - & - & - \\
+          \hline
+          {\em 5} & $-$ & 0.1 & - & + & - & 0.0439 & - & + & + \\
+          \hline
+          {\em 6} & $-$ & 0.1 & + & + & + & 0.3244 & - & - & - \\
+          \hline
+          {\em 7} & $+$ & 0.1 & + & + & + & 0.0439 & + & - & - \\
+          \hline
+          {\em 8} & $-$ & 0.1 & - & - & - & 0.0439 & - & - & - \\
+          \hline
+          {\em 9} & $+$ & 0.1 & - & + & - & 0.3244 & - & + & + \\
+          \hline
+          {\em 10} & $+$ & 0.1 & + & + & + & 0.0439 & - & - & + \\
+          \hline
+        \end{tabular}
+}
+\newline
+For the $D_0$, we use a uniform distribution. $\Rightarrow D_0 = \frac{1}{10} = 0.1$
+
+\item 
+The error for each of the weak learners $f_1, f_2$ are as follows:
+$$
+\epsilon_1 = \sum_{incorrect} D_0 = (0.1)(2) = 0.2
+$$
+$$
+\epsilon_2 = \sum_{incorrect} D_0 = (0.1)(3) = 0.3
+$$
+Hence, the algorithm chooses $f_1$ as its hypothesis in the first step
+$$
+\alpha_1 = \frac{1}{2} \log_2 \left( \frac{1 - 0.2}{0.2} \right) =  \frac{1}{2} \log_2 (4) = 1
+$$
+
+\item 
+To Calculate the new weights for each example, we can divide it into examples we predicted correctly
+and the ones we predicted incorrectly
+$$
+D_{1,correct} = \frac{0.1}{Z_1} \cdot 2^{-1} = \frac{0.05}{Z_t}
+$$
+$$
+D_{1,incorrect} = \frac{0.1}{Z_1} \cdot 2^{1} = \frac{0.2}{Z_t}
+$$
+$$
+Z_t = 8(0.05) + 2 (0.4) = 0.8
+$$
+$$
+D_{1,correct} = \frac{0.05}{0.8} = 0.0625
+$$
+$$
+D_{1,incorrect} = \frac{0.2}{0.8} = 0.25
+$$
+$$
+\epsilon_1 = 0.0625(2) + 0.25 = 0.375
+$$
+$$
+\epsilon_2 = 0.0625(4) = 0.25
+$$
+$$
+\alpha_2 = \frac{1}{2} \log_2 \left( \frac{1 - 0.25}{0.25} \right) = 0.7924
+$$
+\item 
+The final hypothesis learned by AdaBoost after 2 iterations is:
+$$
+h = sign(sign(x - 2) + 0.7924 \cdot sign( y - 11.5))
+$$
+
+\end{enumerate}
+
+\newpage
+\section{Problem 2}
+
+\solution{Solution to problem 2}
+\begin{enumerate}
+\item 
+	\begin{enumerate}
+		\item 
+			For One-vs All: Number of Classifiers = K \newline
+			For All-vs-All: Number of Classifiers = $\frac{K(K-1)	}{2}$
+		\item 
+			For One-vs-All: Need to look at all m examples during training time \newline
+			For All-vs-All: Need to only look at $\frac{2m}{k}$ during training time for
+							 each classifier, ($\frac{m}{k}$ for each of the classes to 
+							 which the classifier corresponds to) 
+		\item
+			For One-vs-all: Since the perceptron algorithm learns a real valued
+			function, to predict the class for each example, we just pick the class
+			that has the highest value from the perceptron algorithm. \newline
+			For all-vs-all: For all-vs-all classification, we have the option of
+			Majority vote or Tournament style. For Majority, for each example, pick the class that 				the maximum number of classifiers picked (i.e. the majority of the classifier, although 			it can be less than 50\% ). For Tournament style, we divide the classifiers into
+			pairs, and the winner of each pair moves on and we keep repeating that until
+			we have a winner.
+		\item
+			Complexity for One-vs-all: O(KL) \newline
+			Complexity for All-vs-All: O($K^2L$) \newline
+			where L is the time-complexity of the
+			learning algorithm we're using on number of training examples used (answer to
+			part ii)
+	\end{enumerate}
+\item 
+The preference for either scheme depends on the classification problem and 
+the efficiency of the training algorithm. For instance, if the data is not linearly
+separable, we would prefer to use one vs all, instead of all vs all. However, since
+the number of examples each classifier trains on is lesser with All vs All, will make
+the training time per classifier faster, even though there will be more classifiers
+that we would have to train. Overall, the preference depends on the classification 
+problem, the data and the hardware we have available to us for this problem.
+
+\item
+Yes, using a Kernel Perceptron Algorithm changes the analysis. The Kernel 
+Perceptron algorithm runs in time O($n^2 d$), where n is the number of examples
+provided, and d is the dimension of the kernel function. \newline
+Using this knowledge, \newline
+Runtime for one-vs-all: O($Km^2d$), where d is the dimension of the feature vectors \newline
+Runtime for All-vs-All: O($K^2$) * O(d $\left(\frac{2m}{K}\right)^2$) = O($m^2 d$) where d is the dimension of the feature vectors  \newline
+Thus, All-vs-All is more efficient, but one-vs-all might be preferred depending on the learning
+problem.
+
+\item
+This learning algorithm has the same time complexity as the Kernel Perceptron,
+and hence the runtime is the same as part (c). \newline
+Runtime for one-vs-all: O($Km^2d$) \newline
+Runtime for All-vs-All: O($m^2 d$) \newline
+Thus, All-vs-All is more efficient, but one-vs-all might be preferred depending on the learning
+problem.
+
+\item
+Runtime for one-vs-all: O(K) classifiers, that will train in O($d^2m$) time. $\Rightarrow O(Kd^2m)$ \newline
+Runtime for All vs all: O($K^2$) classifiers that will train in O($d^2 \frac{m}{k}$) time. $\Rightarrow O(Kd^2m)$ \newline
+Hence, both the schemes have the same run time, and are equally efficient.
+
+\item
+Runtime for counting: For counting, we need to go through all O($K^2$) classifiers, each of which has 
+a runtime of O(d). $\Rightarrow O(K^2 d)$ \newline
+Runtime for Knockout: For knockout, we compare two classes at a time using the classifier that corresponds
+to these two classes. Once a class "loses", we don't consider it again. Hence we only need to go through
+O(K) classifiers, each of which has a runtime of O(d).
+$\Rightarrow O(Kd)$
+\end{enumerate}
+\end{document}
