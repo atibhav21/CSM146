@@ -31,7 +31,7 @@
 	  & \multicolumn{4}{c|}{Hypothesis 2 (2nd iteration)} \\
           \cline{3-10}
           {\em i} & Label & $D_0$ & $f_1 \equiv $ & $f_2 \equiv $ & $h_1\equiv$ & $D_1$ &  $f_1 \equiv $ & $f_2 \equiv $ & $h_2 \equiv $ \\
-          & & & [$x >$ 2 $\;$] & [$y >$ 6 $\;$] & [sgn(x - 2)] & & [$x >$10$\;$] & [$y > 11.5$ $\;$] & [$\;$ sgn(y - 11.5) $\;$] \\
+          & & & [$x >$ 2 $\;$] & [$y >$ 6 $\;$] & [sgn(x - 2)] & & [$x >$10$\;$] & [$y > 11$ $\;$] & [$\;$ sgn(y - 11) $\;$] \\
 
           \tiny{(1)} & \tiny{(2)} & \tiny{(3)} & \tiny{(4)} &  \tiny{(5)} & \tiny{(6)} & \tiny{(7)} & \tiny{(8)} & \tiny{(9)} & \tiny{(10)}\\
           \hline \hline
@@ -103,7 +103,7 @@ $$
 \item 
 The final hypothesis learned by AdaBoost after 2 iterations is:
 $$
-h = sign(sign(x - 2) + 0.7924 \cdot sign( y - 11.5))
+h = sign(sign(x - 2) + 0.7924 \cdot sign( y - 11))
 $$
 
 \end{enumerate}
@@ -171,11 +171,11 @@ Runtime for All vs all: O($K^2$) classifiers that will train in O($d^2 \frac{m}{
 Hence, both the schemes have the same run time, and are equally efficient.
 
 \item
-Runtime for counting: For counting, we need to go through all O($K^2$) classifiers, each of which has 
-a runtime of O(d). $\Rightarrow O(K^2 d)$ \newline
+Runtime for counting: For counting, we need to go through all O($m^2$) classifiers, each of which has 
+a runtime of O(d). $\Rightarrow O(m^2 d)$ \newline
 Runtime for Knockout: For knockout, we compare two classes at a time using the classifier that corresponds
 to these two classes. Once a class "loses", we don't consider it again. Hence we only need to go through
-O(K) classifiers, each of which has a runtime of O(d).
-$\Rightarrow O(Kd)$
+O(m) classifiers, each of which has a runtime of O(d).
+$\Rightarrow O(md)$
 \end{enumerate}
 \end{document}

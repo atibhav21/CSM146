@@ -6,6 +6,7 @@ Description : Famous Faces
 # numpy and scipy libraries
 import numpy as np
 from scipy import stats
+from operator import add
 
 ######################################################################
 # classes
@@ -112,7 +113,14 @@ class Cluster(object) :
         ### ========== TODO : START ========== ###
         # part b: implement
         # set the centroid label to any value (e.g. the most common label in this cluster)
-        centroid = None
+        attr_list = [np.array(p.attrs) for p in self.points]
+        result = np.zeros(attr_list[0].shape)
+        for attr in attr_list:
+            result = np.add(result, attr)
+        center =  np.divide(result, float(len(self.points)) )
+        label_list = [p.label for p in self.points]
+        label = max(set(label_list), key=label_list.count)
+        centroid = Point('cluster_center', label, center)
         return centroid
         ### ========== TODO : END ========== ###
     
@@ -130,6 +138,17 @@ class Cluster(object) :
         ### ========== TODO : START ========== ###
         # part b: implement
         medoid = None
+        min_distance = None
+        for point in self.points:
+            distance = 0
+            for point_2 in self.points:
+                if point1 == point_2:
+                    continue
+                else:
+                    distance += point1.distance(point_2)
+            if medoid == None or distance < min_distance:
+                min_distance = distance
+                medoid = point
         return medoid
         ### ========== TODO : END ========== ###
     
@@ -189,6 +208,8 @@ class ClusterSet(object):
         ### ========== TODO : START ========== ###
         # part 2b: implement
         centroids = []
+        for cluster in self.members:
+            centroids.append(cluster.centroid())
         return centroids
         ### ========== TODO : END ========== ###
     
@@ -205,6 +226,8 @@ class ClusterSet(object):
         ### ========== TODO : START ========== ###
         # part 2b: implement
         medoids = []
+        for cluster in self.members:
+            medoids.append(cluster.medoid())
         return medoids
         ### ========== TODO : END ========== ###
     

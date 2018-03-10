@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.27)  7 MAR 2018 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.27)  8 MAR 2018 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -182,7 +182,7 @@ LaTeX Warning: No \author given.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 59.
 
-Overfull \hbox (78.87086pt too wide) in paragraph at lines 25--62
+Overfull \hbox (65.41463pt too wide) in paragraph at lines 25--62
 [] 
  []
 
@@ -211,7 +211,7 @@ basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2
 ve/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
 l/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on ps_template.pdf (4 pages, 132878 bytes).
+Output written on ps_template.pdf (4 pages, 132860 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream

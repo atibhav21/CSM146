@@ -130,7 +130,7 @@ def random_init(points, k) :
     """
     ### ========== TODO : START ========== ###
     # part c: implement (hint: use np.random.choice)
-    return None
+    return np.random.choice(points, k, replace=False)
     ### ========== TODO : END ========== ###
 
 
@@ -156,6 +156,58 @@ def cheat_init(points) :
     initial_points = []
     return initial_points
     ### ========== TODO : END ========== ###
+
+def kAverages(points, k, average, init='random', plot=True):
+    k_clusters = ClusterSet()
+
+
+    cluster_centers = None
+    if(init == 'random'):
+        cluster_centers = random_init(points, k)
+    elif(init == 'cheat'):
+        cluster_centers = cheat_init(points, k)
+
+
+    for center in cluster_centers:
+        cluster = Cluster([center]) # Create the cluster
+        k_clusters.add(cluster)
+
+    iteration_num = 0 
+    while True:
+        iteration_num += 1
+        new_cluster_assignments = {}
+        centroids = average(k_clusters)
+
+        for i in range(k):
+            new_cluster_assignments[i] = []
+
+        for p in points:
+            min_dist_index = 0
+            min_dist = None
+            for i, center in enumerate(centroids):
+                dist_to_center = p.distance(center)
+                if min_dist == None or dist_to_center < min_dist:
+                    min_dist_index = i
+                    min_dist = dist_to_center
+            
+            new_cluster_assignments[min_dist_index].append(p)
+        
+        new_cluster = ClusterSet()
+
+        for i in range(k):
+            cluster = Cluster(new_cluster_assignments[i])    
+            new_cluster.add(cluster)
+
+        if(new_cluster.equivalent(k_clusters)):
+            break
+        else:
+            k_clusters = new_cluster
+        title_string = 'Iteration Number: %d' % iteration_num
+        plot_clusters(k_clusters, title_string, average)
+
+    plot_clusters(k_clusters, 'Final Clustering', average)
+
+    return k_clusters
 
 
 def kMeans(points, k, init='random', plot=False) :
@@ -190,6 +242,54 @@ def kMeans(points, k, init='random', plot=False) :
     #   (2) Repeat until the clustering no longer changes.
     #   (3) To plot, use plot_clusters(...).
     k_clusters = ClusterSet()
+
+
+    cluster_centers = None
+    if(init == 'random'):
+        cluster_centers = random_init(points, k)
+    elif(init == 'cheat'):
+        cluster_centers = cheat_init(points, k)
+
+
+    for center in cluster_centers:
+        cluster = Cluster([center]) # Create the cluster
+        k_clusters.add(cluster)
+
+    iteration_num = 0 
+    while True:
+        iteration_num += 1
+        new_cluster_assignments = {}
+        centroids = k_clusters.centroids()
+
+        for i in range(k):
+            new_cluster_assignments[i] = []
+
+        for p in points:
+            min_dist_index = 0
+            min_dist = None
+            for i, center in enumerate(centroids):
+                dist_to_center = p.distance(center)
+                if min_dist == None or dist_to_center < min_dist:
+                    min_dist_index = i
+                    min_dist = dist_to_center
+            
+            new_cluster_assignments[min_dist_index].append(p)
+        
+        new_cluster = ClusterSet()
+
+        for i in range(k):
+            cluster = Cluster(new_cluster_assignments[i])    
+            new_cluster.add(cluster)
+
+        if(new_cluster.equivalent(k_clusters)):
+            break
+        else:
+            k_clusters = new_cluster
+        title_string = 'Iteration Number: %d' % iteration_num
+        plot_clusters(k_clusters, title_string, ClusterSet.centroids)
+
+    plot_clusters(k_clusters, 'Final Clustering', ClusterSet.centroids)
+
     return k_clusters
     ### ========== TODO : END ========== ###
 
@@ -215,7 +315,8 @@ def main() :
     ### ========== TODO : START ========== ###
     # part d, part e, part f: cluster toy dataset
     np.random.seed(1234)
-    
+    points = generate_points_2d(20) 
+    clusters = kMeans(points, 3)
     ### ========== TODO : END ========== ###
     
     
