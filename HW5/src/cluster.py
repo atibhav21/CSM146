@@ -142,10 +142,10 @@ class Cluster(object) :
         for point in self.points:
             distance = 0
             for point_2 in self.points:
-                if point1 == point_2:
+                if point == point_2:
                     continue
                 else:
-                    distance += point1.distance(point_2)
+                    distance += point.distance(point_2)
             if medoid == None or distance < min_distance:
                 min_distance = distance
                 medoid = point
