@@ -6,6 +6,9 @@
 
 \newcommand{\solution}[1]{{{\color{blue}{\bf Solution:} {#1}}}}
 \usepackage[usenames,dvipsnames,svgnames,table,hyperref]{xcolor}
+\usepackage{graphicx}
+
+\graphicspath{{images/}}
 
 \renewcommand*{\theenumi}{\alph{enumi}}
 \renewcommand*\labelenumi{(\theenumi)}
@@ -90,7 +93,57 @@ For a training set S with labels y, \newline
 $$\mu = S$$
 $$c = y$$
 $$k = |S|$$
+\setcounter{enumi}{3}
 \item 
+The graphs for random initialization with kMeans look like the following (for 20 points, and 3 clusters): \newline
+\includegraphics[scale=0.4]{means_1.png} 
+\includegraphics[scale=0.4]{means_2.png} \newline
+\includegraphics[scale=0.4]{means_3.png}
+\includegraphics[scale=0.4]{means_final.png} 
 
+The cluster centers for each of the above iterations is as follows
+\begin{center}
+	\scalebox{0.8}{
+	\begin{tabular}{c | c | c | c}
+		Iteration Number & Cluster Center 1 & Cluster Center 2 & Cluster Center 3 \\
+		\hline
+		1 & (1.061948,0.775711) & (1.210252,0.638547) & (0.649507,0.974770) \\
+		\hline
+		2 & (1.089668,1.004243) & (1.900104,0.480904) & (0.192982,0.606416) \\
+		\hline		
+		3 & (1.016055,0.952888) & (2.005941,0.477239) & (0.049180,0.481094) \\
+		\hline		
+		Final & (1.040635,0.940960) & (2.030856,0.465384) & (0.049180,0.481094) \\
+	
+	\end{tabular}}
+\end{center}
+
+\item 
+The graphs for random initialization with kMedoids looks like the following: \newline
+\includegraphics[scale=0.4]{medoid_1.png}
+\includegraphics[scale=0.4]{medoid_2.png} \newline
+\includegraphics[scale=0.4]{medoid_3.png}
+\includegraphics[scale=0.4]{medoid_4.png} \newline
+\includegraphics[scale=0.4]{medoid_5.png}
+\includegraphics[scale=0.4]{medoid_final.png} \newline
+The cluster centers for each of the above iterations is as follows
+\begin{center}
+	\scalebox{0.8}{
+	\begin{tabular}{c | c | c | c}
+		Iteration Number & Cluster Center 1 & Cluster Center 2 & Cluster Center 3 \\
+		\hline
+		1 & (-0.033408,0.500212) & (1.157995,1.009878) & (0.084167,0.739096) \\
+		\hline		
+		2 & (0.012471,0.467721) & (1.507651,0.714342) & (0.104758,0.604594) \\
+		\hline		
+		3 & (0.012471,0.467721) & (1.932385,0.612375) & (0.104758,0.604594) \\
+		\hline		
+		4 & (0.012471,0.467721) & (1.948285,0.579243) & (0.649507,0.974770) \\
+		\hline		
+		5 & (0.012471,0.467721) & (1.969410,0.472674) & (1.076992,0.947875) \\
+		\hline		
+		Final & (0.012471,0.467721) & (2.011976,0.440005) & (1.076992,0.947875) \\
+	\end{tabular}}
+\end{center}
 \end{enumerate}
 \end{document}

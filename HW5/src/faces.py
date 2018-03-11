@@ -193,7 +193,7 @@ def kAverages(points, k, average, init='random', plot=True):
         new_cluster_assignments = {}
         centers = average(k_clusters)
 
-        print([str(i) for i in centers])
+        print('%d & (%f,%f) & (%f,%f) & (%f,%f) \\\\' % (iteration_num, centers[0].attrs[0], centers[0].attrs[1], centers[1].attrs[0], centers[1].attrs[1], centers[2].attrs[0], centers[2].attrs[1]))
 
         for i in range(k):
             new_cluster_assignments[i] = []
@@ -284,7 +284,7 @@ def main() :
     # part d, part e, part f: cluster toy dataset
     np.random.seed(1234)
     points = generate_points_2d(20) 
-    clusters = kMeans(points, 3, init='cheat', plot=True)
+    clusters = kMeans(points, 3, init='random', plot=False)
     clusters = kMedoids(points, 3, init='random', plot=True)
     ### ========== TODO : END ========== ###
     
