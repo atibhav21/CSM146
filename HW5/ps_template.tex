@@ -7,6 +7,7 @@
 \newcommand{\solution}[1]{{{\color{blue}{\bf Solution:} {#1}}}}
 \usepackage[usenames,dvipsnames,svgnames,table,hyperref]{xcolor}
 \usepackage{graphicx}
+\usepackage{amsmath}
 
 \graphicspath{{images/}}
 
@@ -17,7 +18,7 @@
 
 
 \begin{document}
-\ctitle{xx}{yy}
+\ctitle{5}{Atibhav Mittal (ID: 804598987)}
 \author{}
 \date{}
 \maketitle
@@ -26,23 +27,37 @@
 \section{Problem 1}
 \begin{enumerate}
 \item \solution{} \newline
-TODO
+Using the above mentioned model, we lose the ordering of the words in the document
+and only use the final count of each word in the document. The order of the document
+could be important information to help figure out if a document is good/bad.
 
 \item \solution{} \newline
-We know from Conditional Probability that
+Using Naive Bayes,
 $$
-P(D_i, y_i) = P(D_i | y = 0) \cdot P (y = 0) + P(D_i | y = 1) \cdot P (y = 1)
+P(D_i, y_i) = \left( \frac{n!}{a_i ! b_i ! c_ i !} \alpha_1^{a_i} \beta_1^{b_i} \gamma_1 ^ {c_i} \theta  \right) ^ {y_i}
+			\left( \frac{n!}{a_i ! b_i ! c_ i !} \alpha_0^{a_i} \beta_0^{b_i} \gamma_0 ^ {c_i} (1 - \theta)  \right) ^ {1 - y_i}
+$$
+Taking the log on both sides,
+\begin{align*} \label{eq:pareto mle2}
+\log (P(D_i, y_i)) = y_i \left( \log \left(  \frac{n! \theta}{a_i ! b_i ! c_ i !} \right) + a_i \log(\alpha_1) + b_i \log(\beta_1) + c_i \log(\gamma_1) \right) \\
+	+ (1 - y_i) \left( \log \left(  \frac{n! (1 - \theta)}{a_i ! b_i ! c_ i !} \right)  a_i \log(\alpha_0) + b_i \log(\beta_0) + c_i \log(\gamma_0) \right)
+\end{align*}
+
+\item \solution{} \newline
+\includegraphics[scale=0.1]{1c_1.JPG} \newline
+\includegraphics[scale=0.1]{1c_2.JPG} \newline
+Hence, we get the final parameters as the following:
+$$
+\alpha_1 = \frac{\sum_{i=1}^m y_i a_i}{n \sum_{i=1}^m y_i },
+\beta_1 = \frac{\sum_{i=1}^m y_i b_i}{n \sum_{i=1}^m y_i },
+\gamma_1 = \frac{\sum_{i=1}^m y_i c_i}{n \sum_{i=1}^m y_i }
 $$
 $$
-P(y_i = 1) = \theta, P(y_i = 0) = 1 - \theta
+\alpha_0 = \frac{\sum_{i=1}^m (1 - y_i) a_i}{n \sum_{i=1}^m (1 - y_i) },
+\beta_0 = \frac{\sum_{i=1}^m (1 - y_i) b_i}{n \sum_{i=1}^m (1 - y_i) },
+\gamma_0 = \frac{\sum_{i=1}^m (1 - y_i) c_i}{n \sum_{i=1}^m (1 - y_i) }
 $$
-$$
-P(D_i, y_i) = \left(\frac{n!}{a_i ! b_i ! c_i !} \alpha_1^{a_i} \beta_1^{b_i} \gamma_1^{c_i} \right) \cdot \theta
-				+ \left(\frac{n!}{a_i ! b_i ! c_i !} \alpha_0^{a_i} \beta_0^{b_i} \gamma_0^{c_i} \right) \cdot (1 - \theta)
-$$
-$$
-\log P(D_i, y_i) = 
-$$
+
 \end{enumerate}
 
 \newpage
@@ -78,7 +93,23 @@ $$
 Hence, the more frequent output in the first position is A
 
 \item \solution{} \newline
-TODO
+We can think of observing the 3 symbols as either the first 3, or later.
+If we're observing 3 symbols starting at any other time than at t = 1, we know
+that we are always going to be in state 1.  \newline
+In state 1, P(A) $>>$ P(B), hence, the most likely pattern, starting at $t\neq 1$ would be AAA \newline
+If we start at $t=1$, we can either be in state 1, or state 2 initially. \newline
+The probabilities for each pattern is as follows:
+$$
+P(AAA) = P(AAA|s_1 = 1)P(s_1 = 1) + P(AAA|s_1 = 2)P(s_1 = 2) 
+$$
+$$
+P(AAA) = (0.99)^3 ( 0.49) + (0.49)(0.99)^2 (0.51) = 0.7203
+$$			
+Since P(AAA) $>$ 0.5, and the sum of all patterns will be 1, we know that P(AAA) will be the
+most common pattern in this case also.
+
+Hence, AAA is the most common pattern
+
 \end{enumerate}
 
 \newpage
@@ -145,5 +176,36 @@ The cluster centers for each of the above iterations is as follows
 		Final & (0.012471,0.467721) & (2.011976,0.440005) & (1.076992,0.947875) \\
 	\end{tabular}}
 \end{center}
+
+\item 
+The graphs for cheat initialization with kMeans look like the following: \newline
+\includegraphics[scale=0.4]{means_cheat_1.png}
+\includegraphics[scale=0.4]{means_cheat_final.png} \newline
+The cluster centers for each of the above iterations is as follows
+\begin{center}
+	\scalebox{0.8}{
+	\begin{tabular}{c | c | c | c}
+		Iteration Number & Cluster Center 1 & Cluster Center 2 & Cluster Center 3 \\
+		\hline
+		1 & (0.012471,0.467721) & (1.076992,0.947875) & (2.011976,0.440005) \\
+		\hline
+		Final & (0.049180,0.481094) & (1.040635,0.940960) & (2.030856,0.465384) 
+	\end{tabular}}
+\end{center}
+
+The graphs for cheat initialization with kMedoids look like the following: \newline
+\includegraphics[scale=0.4]{medoids_cheat_1.png}
+\includegraphics[scale=0.4]{medoids_cheat_final.png} \newline
+The cluster centers for each of the above iterations is as follows
+\begin{center}
+	\scalebox{0.8}{
+	\begin{tabular}{c | c | c | c}
+		Iteration Number & Cluster Center 1 & Cluster Center 2 & Cluster Center 3 \\
+		\hline
+		1 & (0.012471,0.467721) & (1.076992,0.947875) & (2.011976,0.440005) \\
+		\hline
+		Final & (0.012471,0.467721) & (1.076992,0.947875) & (2.011976,0.440005) 
+	\end{tabular}}
+\end{center}		
 \end{enumerate}
 \end{document}

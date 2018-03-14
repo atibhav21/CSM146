@@ -284,8 +284,8 @@ def main() :
     # part d, part e, part f: cluster toy dataset
     np.random.seed(1234)
     points = generate_points_2d(20) 
-    clusters = kMeans(points, 3, init='random', plot=False)
-    clusters = kMedoids(points, 3, init='random', plot=True)
+    clusters = kMeans(points, 3, init='cheat', plot=False)
+    clusters = kMedoids(points, 3, init='cheat', plot=True)
     ### ========== TODO : END ========== ###
     
     

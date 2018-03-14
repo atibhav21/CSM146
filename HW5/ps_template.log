@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.27)  10 MAR 2018 22:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.27)  13 MAR 2018 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -94,35 +94,93 @@ Package graphics Info: Driver file: pdftex.def on input line 96.
 )
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
-) (./ps_template.aux)
+) (/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen107
+))
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen108
+)
+(/usr/local/texlive/2016basic/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks18
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks19
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks20
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+(./ps_template.aux)
 \openout1 = `ps_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 (/usr/local/texlive/2016basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
-\scratchdimen=\dimen107
-\scratchbox=\box26
-\nofMPsegments=\count90
-\nofMParguments=\count91
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count92
-\MPscratchDim=\dimen108
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count101
+\scratchdimen=\dimen116
+\scratchbox=\box28
+\nofMPsegments=\count102
+\nofMParguments=\count103
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count104
+\MPscratchDim=\dimen117
+\MPnumerator=\count105
+\makeMPintoPDFobject=\count106
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2016basic/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -169,30 +227,33 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 23.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 23.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 23.
-
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 33.
-[1
+<images/1c_1.JPG, id=1, 2457.18pt x 3276.24pt>
+File: images/1c_1.JPG Graphic file (type jpg)
+ <use images/1c_1.JPG>
+Package pdftex.def Info: images/1c_1.JPG used on input line 47.
+(pdftex.def)             Requested size: 245.73239pt x 327.64319pt.
 
-{/usr/local/texlive/2016basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 54.
+<images/1c_2.JPG, id=2, 2457.18pt x 3276.24pt>
+File: images/1c_2.JPG Graphic file (type jpg)
+ <use images/1c_2.JPG>
+Package pdftex.def Info: images/1c_2.JPG used on input line 48.
+(pdftex.def)             Requested size: 245.73239pt x 327.64319pt.
+ [1
+
+{/usr/local/texlive/2016basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+ <./images/1c_1.JPG>] [3 <./images/1c_2.JPG>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
 
 (/usr/local/texlive/2016basic/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
 
-Overfull \hbox (26.13463pt too wide) detected at line 67
+Overfull \hbox (26.13463pt too wide) detected at line 82
 \OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 first \OT1/cmr/m/n
 /10.95 = \OML/cmm/m/it/10.95 A\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 P\OT1/
 cmr/m/n/10.95 (\OML/cmm/m/it/10.95 O[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95
@@ -206,7 +267,7 @@ m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n/10.95 = 2)
  []
 
 
-Overfull \hbox (28.06223pt too wide) detected at line 74
+Overfull \hbox (28.06223pt too wide) detected at line 89
 \OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 first \OT1/cmr/m/n
 /10.95 = \OML/cmm/m/it/10.95 B\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 P\OT1/
 cmr/m/n/10.95 (\OML/cmm/m/it/10.95 O[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95
@@ -219,134 +280,184 @@ m/it/10.95 P\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n/10.95 = 2)
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 88--93
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 119--124
 
  []
 
-<images/means_1.png, id=19, 462.528pt x 346.896pt>
+<images/means_1.png, id=28, 462.528pt x 346.896pt>
 File: images/means_1.png Graphic file (type png)
  <use images/means_1.png>
-Package pdftex.def Info: images/means_1.png used on input line 99.
+Package pdftex.def Info: images/means_1.png used on input line 130.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-<images/means_2.png, id=21, 462.528pt x 346.896pt>
+<images/means_2.png, id=30, 462.528pt x 346.896pt>
 File: images/means_2.png Graphic file (type png)
  <use images/means_2.png>
-Package pdftex.def Info: images/means_2.png used on input line 100.
+Package pdftex.def Info: images/means_2.png used on input line 131.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-<images/means_3.png, id=22, 462.528pt x 346.896pt>
+<images/means_3.png, id=31, 462.528pt x 346.896pt>
 File: images/means_3.png Graphic file (type png)
  <use images/means_3.png>
-Package pdftex.def Info: images/means_3.png used on input line 101.
+Package pdftex.def Info: images/means_3.png used on input line 132.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-<images/means_final.png, id=23, 462.528pt x 346.896pt>
+<images/means_final.png, id=32, 462.528pt x 346.896pt>
 File: images/means_final.png Graphic file (type png)
 
 <use images/means_final.png>
-Package pdftex.def Info: images/means_final.png used on input line 102.
+Package pdftex.def Info: images/means_final.png used on input line 133.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \hbox (39.8242pt too wide) in paragraph at lines 98--103
+Overfull \hbox (39.8242pt too wide) in paragraph at lines 129--134
 [] [] 
  []
 
 
-Overfull \hbox (39.8242pt too wide) in paragraph at lines 98--103
+Overfull \hbox (39.8242pt too wide) in paragraph at lines 129--134
 [] [] 
  []
 
 
-Overfull \hbox (3.16536pt too wide) in paragraph at lines 118--119
+Overfull \hbox (3.16536pt too wide) in paragraph at lines 149--150
  [] 
  []
 
-[3 <./images/means_1.png> <./images/means_2.png> <./images/means_3.png> <./imag
-es/means_final.png>] <images/medoid_1.png, id=31, 462.528pt x 346.896pt>
+[5 <./images/means_1.png> <./images/means_2.png> <./images/means_3.png> <./imag
+es/means_final.png>] <images/medoid_1.png, id=40, 462.528pt x 346.896pt>
 File: images/medoid_1.png Graphic file (type png)
 
 <use images/medoid_1.png>
-Package pdftex.def Info: images/medoid_1.png used on input line 123.
+Package pdftex.def Info: images/medoid_1.png used on input line 154.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
- <images/medoid_2.png, id=32, 462.528pt x 346.896pt>
+ <images/medoid_2.png, id=41, 462.528pt x 346.896pt>
 File: images/medoid_2.png Graphic file (type png)
 
 <use images/medoid_2.png>
-Package pdftex.def Info: images/medoid_2.png used on input line 124.
+Package pdftex.def Info: images/medoid_2.png used on input line 155.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
- <images/medoid_3.png, id=33, 462.528pt x 346.896pt>
+ <images/medoid_3.png, id=42, 462.528pt x 346.896pt>
 File: images/medoid_3.png Graphic file (type png)
 
 <use images/medoid_3.png>
-Package pdftex.def Info: images/medoid_3.png used on input line 125.
+Package pdftex.def Info: images/medoid_3.png used on input line 156.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
- <images/medoid_4.png, id=34, 462.528pt x 346.896pt>
+ <images/medoid_4.png, id=43, 462.528pt x 346.896pt>
 File: images/medoid_4.png Graphic file (type png)
 
 <use images/medoid_4.png>
-Package pdftex.def Info: images/medoid_4.png used on input line 126.
+Package pdftex.def Info: images/medoid_4.png used on input line 157.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
- <images/medoid_5.png, id=35, 462.528pt x 346.896pt>
+ <images/medoid_5.png, id=44, 462.528pt x 346.896pt>
 File: images/medoid_5.png Graphic file (type png)
 
 <use images/medoid_5.png>
-Package pdftex.def Info: images/medoid_5.png used on input line 127.
+Package pdftex.def Info: images/medoid_5.png used on input line 158.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-<images/medoid_final.png, id=36, 462.528pt x 346.896pt>
+<images/medoid_final.png, id=45, 462.528pt x 346.896pt>
 File: images/medoid_final.png Graphic file (type png)
 
 <use images/medoid_final.png>
-Package pdftex.def Info: images/medoid_final.png used on input line 128.
+Package pdftex.def Info: images/medoid_final.png used on input line 159.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \hbox (39.8242pt too wide) in paragraph at lines 122--130
+Overfull \hbox (39.8242pt too wide) in paragraph at lines 153--161
 [] [] 
  []
 
 
-Overfull \hbox (39.8242pt too wide) in paragraph at lines 122--130
+Overfull \hbox (39.8242pt too wide) in paragraph at lines 153--161
 [] [] 
  []
 
 
-Overfull \hbox (39.8242pt too wide) in paragraph at lines 122--130
+Overfull \hbox (39.8242pt too wide) in paragraph at lines 153--161
 [] [] 
  []
 
 
-Overfull \hbox (6.08537pt too wide) in paragraph at lines 146--147
+Overfull \hbox (6.08537pt too wide) in paragraph at lines 177--178
  [] 
  []
 
-[4 <./images/medoid_1.png> <./images/medoid_2.png> <./images/medoid_3.png> <./i
+[6 <./images/medoid_1.png> <./images/medoid_2.png> <./images/medoid_3.png> <./i
 mages/medoid_4.png> <./images/medoid_5.png> <./images/medoid_final.png>]
-[5] (./ps_template.aux) ) 
+<images/means_cheat_1.png, id=55, 462.528pt x 346.896pt>
+File: images/means_cheat_1.png Graphic file (type png)
+
+<use images/means_cheat_1.png>
+Package pdftex.def Info: images/means_cheat_1.png used on input line 182.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+
+<images/means_cheat_final.png, id=56, 462.528pt x 346.896pt>
+File: images/means_cheat_final.png Graphic file (type png)
+
+<use images/means_cheat_final.png>
+Package pdftex.def Info: images/means_cheat_final.png used on input line 183.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+
+Overfull \hbox (39.8242pt too wide) in paragraph at lines 181--185
+[] [] 
+ []
+
+
+Overfull \hbox (3.16536pt too wide) in paragraph at lines 193--194
+ [] 
+ []
+
+<images/medoids_cheat_1.png, id=57, 462.528pt x 346.896pt>
+File: images/medoids_cheat_1.png Graphic file (type png)
+
+<use images/medoids_cheat_1.png>
+Package pdftex.def Info: images/medoids_cheat_1.png used on input line 197.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+
+<images/medoids_cheat_final.png, id=58, 462.528pt x 346.896pt>
+File: images/medoids_cheat_final.png Graphic file (type png)
+
+<use images/medoids_cheat_final.png>
+Package pdftex.def Info: images/medoids_cheat_final.png used on input line 198.
+
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+
+Overfull \hbox (39.8242pt too wide) in paragraph at lines 196--200
+[] [] 
+ []
+
+
+Overfull \hbox (3.16536pt too wide) in paragraph at lines 208--209
+ [] 
+ []
+
+[7 <./images/means_cheat_1.png> <./images/means_cheat_final.png> <./images/medo
+ids_cheat_1.png> <./images/medoids_cheat_final.png>] [8] (./ps_template.aux) ) 
 Here is how much of TeX's memory you used:
- 2315 strings out of 494447
- 33100 string characters out of 6166766
- 104806 words of memory out of 5000000
- 5627 multiletter control sequences out of 15000+600000
- 8504 words of font info for 30 fonts, out of 8000000 for 9000
+ 2952 strings out of 494447
+ 40816 string characters out of 6166766
+ 115252 words of memory out of 5000000
+ 6239 multiletter control sequences out of 15000+600000
+ 9402 words of font info for 34 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 41i,8n,35p,237b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016basic/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016basic/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016basic/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016basic/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016basic/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016basic/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016basic
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016ba
-sic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016
-basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ps_template.pdf (5 pages, 233656 bytes).
+ 41i,10n,35p,237b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+<
+/usr/local/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmex10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi6.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on ps_template.pdf (8 pages, 4118555 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
